@@ -20,7 +20,7 @@ Su objetivo es promocionar una excursión turística utilizando **HTML puro**, s
 ## 🔗 Sitio web publicado
 
 ➡️ Puedes ver el sitio desplegado en Netlify aquí:  
-****
+**[https://68846f561960c1200fe4d4a7--ht1-dw-josh.netlify.app]**
 
 ---
 
