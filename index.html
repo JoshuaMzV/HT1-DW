@@ -2,59 +2,71 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Excursión turística a Antigua Guatemala - Itinerario, actividades y galería de imágenes">
   <title>Excursión a Antigua Guatemala</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <center>
+  <header>
     <h1>Excursión a Antigua Guatemala</h1>
-  </center>
+  </header>
 
-  <hr>
+  <nav>
+    <fieldset>
+      <legend><strong>Índice</strong></legend>
+      <ul>
+        <li><a href="#descripcion">Descripción del lugar</a></li>
+        <li><a href="#galeria">Galería de imágenes</a></li>
+        <li><a href="#itinerario">Tabla de itinerario</a></li>
+        <li><a href="#actividades">Lista de actividades</a></li>
+        <li><a href="#footer">Pie de página</a></li>
+      </ul>
+    </fieldset>
+  </nav>
 
-  <fieldset>
-    <legend><strong>Índice</strong></legend>
-    <ul>
-      <li><a href="#descripcion">Descripción del lugar</a></li>
-      <li><a href="#galeria">Galería de imágenes</a></li>
-      <li><a href="#itinerario">Tabla de itinerario</a></li>
-      <li><a href="#actividades">Lista de actividades</a></li>
-      <li><a href="#footer">Pie de página</a></li>
-    </ul>
-  </fieldset>
+  <main>
+    <section id="descripcion">
+      <fieldset>
+        <legend><strong>Descripción del lugar</strong></legend>
+        <p>
+          Antigua Guatemala es una ciudad colonial situada en el altiplano central del país. Famosa por su arquitectura barroca, calles empedradas y volcanes que la rodean, es un destino ideal para quienes buscan cultura, historia y belleza natural.
+        </p>
+      </fieldset>
+    </section>
 
-  <hr>
+    <section id="galeria">
+      <fieldset>
+        <legend><strong>Galería de Imágenes</strong></legend>
+        <div class="imagen-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Guatemala_176.jpg" alt="Catedral de Antigua Guatemala, ejemplo de arquitectura colonial" width="300">
+        </div>
+        <div class="imagen-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" alt="Arco de Santa Catalina, icónico arco amarillo" width="300">
+        </div>
+        <div class="imagen-container">
+          <img src="https://www.volcanesdeguatemala.com/imagenes/volcanes/volcan-de-agua-guatemala.jpg" alt="Volcán de Agua visto desde Antigua Guatemala" width="300">
+        </div>
+        <div class="imagen-container">
+          <img src="https://aprende.guatemala.com/wp-content/uploads/2017/05/Las-calles-empedradas-de-Antigua-Guatemala.jpg" alt="Calles empedradas típicas de la ciudad colonial" width="300">
+        </div>
+      </fieldset>
+    </section>
 
-  <fieldset id="descripcion">
-    <legend><strong>Descripción del lugar</strong></legend>
-    <p>
-      Antigua Guatemala es una ciudad colonial situada en el altiplano central del país. Famosa por su arquitectura barroca, calles empedradas y volcanes que la rodean, es un destino ideal para quienes buscan cultura, historia y belleza natural.
-    </p>
-  </fieldset>
-
-  <hr>
-
-  <fieldset id="galeria">
-    <legend><strong>Galería de Imágenes</strong></legend>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Guatemala_176.jpg" alt="Catedral de Antigua" width="300"></p>
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" alt="Arco de Santa Catalina" width="300"></p>
-    <p><img src="https://www.volcanesdeguatemala.com/imagenes/volcanes/volcan-de-agua-guatemala.jpg" alt="Volcán de Agua" width="300"></p>
-    <p><img src="https://aprende.guatemala.com/wp-content/uploads/2017/05/Las-calles-empedradas-de-Antigua-Guatemala.jpg" alt="Calle Colonial" width="300"></p>
-  </fieldset>
-
-  <hr>
-
-  <fieldset id="itinerario">
-  <legend><strong>Tabla de Itinerario</strong></legend>
-  <table border="1" cellpadding="6" cellspacing="0" width="100%">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Actividad</th>
-        <th>Lugar</th>
-      </tr>
-    </thead>
+    <section id="itinerario">
+      <fieldset>
+        <legend><strong>Tabla de Itinerario</strong></legend>
+        <div class="tabla-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Fecha</th>
+                <th scope="col">Hora</th>
+                <th scope="col">Actividad</th>
+                <th scope="col">Lugar</th>
+              </tr>
+            </thead>
     <tbody>
       <tr>
         <td>10/08/2025</td>
@@ -117,28 +129,29 @@
         </td>
         <td>Zona central</td>
       </tr>
-    </tbody>
-  </table>
-</fieldset>
+            </tbody>
+          </table>
+        </div>
+      </fieldset>
+    </section>
 
-  <hr>
+    <section id="actividades">
+      <fieldset>
+        <legend><strong>Actividades adicionales</strong></legend>
+        <ul class="actividades-lista">
+          <li>Subida al Cerro de la Cruz</li>
+          <li>Visita al Museo del Jade</li>
+          <li>Tour del café</li>
+          <li>Compra de artesanías</li>
+          <li>Degustación de chocolate artesanal</li>
+        </ul>
+      </fieldset>
+    </section>
+  </main>
 
-  <fieldset id="actividades">
-    <legend><strong>Actividades adicionales</strong></legend>
-    <ul>
-      <li>Subida al Cerro de la Cruz</li>
-      <li>Visita al Museo del Jade</li>
-      <li>Tour del café</li>
-      <li>Compra de artesanías</li>
-      <li>Degustación de chocolate artesanal</li>
-    </ul>
-  </fieldset>
-
-  <hr>
-
-  <center>
+  <footer>
     <h4 id="footer">Página creada por Joshua Mendez 9490-22-4032</h4>
-  </center>
+  </footer>
 
 </body>
 </html>
