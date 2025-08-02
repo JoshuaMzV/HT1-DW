@@ -41,7 +41,7 @@ Su objetivo es promocionar una excursión turística, comenzando con **HTML puro
 ## 🔗 Sitio web publicado
 
 ➡️ Puedes ver el sitio desplegado en Netlify aquí:  
-**[Actualizar con nuevo enlace después de subir a Netlify]**
+**[https://ht2-dw-josh.netlify.app/]**
 
 ---
 
