@@ -90,7 +90,7 @@ Este proyecto es un sitio web turístico completo desarrollado como parte del cu
 ## 🔗 Sitio web publicado
 
 ➡️ Puedes ver el sitio desplegado en Netlify aquí:  
-**[Actualizar con nuevo enlace después de subir a Netlify]**
+**[https://deploy-preview-2--ht1-dw-josh.netlify.app/]**
 
 ---
 
