@@ -3,155 +3,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Excursión turística a Antigua Guatemala - Itinerario, actividades y galería de imágenes">
-  <title>Excursión a Antigua Guatemala</title>
+  <meta name="description" content="Descubre la magia de Antigua Guatemala - Tu destino turístico ideal">
+  <title>Antigua Guatemala - Turismo</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
-    <h1>Excursión a Antigua Guatemala</h1>
-  </header>
-
-  <nav>
-    <fieldset>
-      <legend><strong>Índice</strong></legend>
-      <ul>
-        <li><a href="#descripcion">Descripción del lugar</a></li>
-        <li><a href="#galeria">Galería de imágenes</a></li>
-        <li><a href="#itinerario">Tabla de itinerario</a></li>
-        <li><a href="#actividades">Lista de actividades</a></li>
-        <li><a href="#footer">Pie de página</a></li>
-      </ul>
-    </fieldset>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-geo-alt-fill me-2"></i>Antigua Guatemala</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="atracciones.html">Atracciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alojamiento.html">Alojamiento</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section id="descripcion">
-      <fieldset>
-        <legend><strong>Descripción del lugar</strong></legend>
-        <p>
-          Antigua Guatemala es una ciudad colonial situada en el altiplano central del país. Famosa por su arquitectura barroca, calles empedradas y volcanes que la rodean, es un destino ideal para quienes buscan cultura, historia y belleza natural.
+  <!-- Hero Section con Carousel -->
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Guatemala_176.jpg" class="d-block w-100" alt="Catedral de Antigua">
+          <div class="carousel-caption">
+            <div class="container">
+              <h1 class="display-4 fw-bold">Bienvenido a Antigua Guatemala</h1>
+              <p class="lead">Descubre la magia de una ciudad colonial llena de historia y cultura</p>
+              <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#infoModal">
+                Conoce Más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" class="d-block w-100" alt="Arco de Santa Catalina">
+          <div class="carousel-caption">
+            <div class="container">
+              <h1 class="display-4 fw-bold">Arquitectura Colonial</h1>
+              <p class="lead">Camina por calles empedradas llenas de historia</p>
+              <a href="atracciones.html" class="btn btn-primary btn-lg">Ver Atracciones <i class="bi bi-camera"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.volcanesdeguatemala.com/imagenes/volcanes/volcan-de-agua-guatemala.jpg" class="d-block w-100" alt="Volcán de Agua">
+          <div class="carousel-caption">
+            <div class="container">
+              <h1 class="display-4 fw-bold">Paisajes Increíbles</h1>
+              <p class="lead">Rodeado de volcanes y naturaleza exuberante</p>
+              <a href="alojamiento.html" class="btn btn-primary btn-lg">Planifica tu Estadía <i class="bi bi-house"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container my-5 pt-5">
+    
+    <!-- Descripción -->
+    <section class="row mb-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="display-5 mb-4">Descubre Antigua Guatemala</h2>
+        <p class="lead">
+          Antigua Guatemala es una ciudad colonial situada en el altiplano central del país. 
+          Famosa por su arquitectura barroca, calles empedradas y volcanes que la rodean, 
+          es un destino ideal para quienes buscan cultura, historia y belleza natural.
         </p>
-      </fieldset>
+      </div>
     </section>
 
-    <section id="galeria">
-      <fieldset>
-        <legend><strong>Galería de Imágenes</strong></legend>
-        <div class="imagen-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Guatemala_176.jpg" alt="Catedral de Antigua Guatemala, ejemplo de arquitectura colonial" width="300">
+    <!-- Cards de características -->
+    <section class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 text-center card-custom">
+          <div class="card-body">
+            <i class="bi bi-building card-icon"></i>
+            <h5 class="card-title">Arquitectura Colonial</h5>
+            <p class="card-text">Explora iglesias, conventos y edificios que datan del siglo XVI.</p>
+          </div>
         </div>
-        <div class="imagen-container">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" alt="Arco de Santa Catalina, icónico arco amarillo" width="300">
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center card-custom">
+          <div class="card-body">
+            <i class="bi bi-mountain card-icon"></i>
+            <h5 class="card-title">Volcanes Majestuosos</h5>
+            <p class="card-text">Disfruta de vistas espectaculares de los volcanes circundantes.</p>
+          </div>
         </div>
-        <div class="imagen-container">
-          <img src="https://www.volcanesdeguatemala.com/imagenes/volcanes/volcan-de-agua-guatemala.jpg" alt="Volcán de Agua visto desde Antigua Guatemala" width="300">
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center card-custom">
+          <div class="card-body">
+            <i class="bi bi-palette card-icon"></i>
+            <h5 class="card-title">Arte y Cultura</h5>
+            <p class="card-text">Sumérgete en una rica tradición artística y cultural única.</p>
+          </div>
         </div>
-        <div class="imagen-container">
-          <img src="https://aprende.guatemala.com/wp-content/uploads/2017/05/Las-calles-empedradas-de-Antigua-Guatemala.jpg" alt="Calles empedradas típicas de la ciudad colonial" width="300">
-        </div>
-      </fieldset>
+      </div>
     </section>
 
-    <section id="itinerario">
-      <fieldset>
-        <legend><strong>Tabla de Itinerario</strong></legend>
-        <div class="tabla-container">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Fecha</th>
-                <th scope="col">Hora</th>
-                <th scope="col">Actividad</th>
-                <th scope="col">Lugar</th>
-              </tr>
-            </thead>
-    <tbody>
-      <tr>
-        <td>10/08/2025</td>
-        <td>07:00 AM</td>
-        <td>
-          <ul>
-            <li>Salida desde Ciudad de Guatemala</li>
-            <li>Refacción en ruta
-              <ul>
-                <li>Sandwich</li>
-                <li>Jugo natural</li>
-              </ul>
-            </li>
-          </ul>
-        </td>
-        <td>Terminal Central / Ruta a Antigua</td>
-      </tr>
-      <tr>
-        <td>10/08/2025</td>
-        <td>09:00 AM</td>
-        <td>
-          <ul>
-            <li>Recorrido por el centro histórico</li>
-            <li>Visita guiada a iglesias y museos</li>
-          </ul>
-        </td>
-        <td>Parque Central</td>
-      </tr>
-      <tr>
-        <td>10/08/2025</td>
-        <td>12:00 PM</td>
-        <td>
-          <ul>
-            <li>Almuerzo típico</li>
-            <li>Menú:
-              <ul>
-                <li>Plato fuerte (Pepián / Pollo en Jocón)</li>
-                <li>Bebida</li>
-                <li>Postre</li>
-              </ul>
-            </li>
-          </ul>
-        </td>
-        <td>Restaurante "La Cuevita"</td>
-      </tr>
-      <tr>
-        <td>10/08/2025</td>
-        <td>03:00 PM</td>
-        <td>
-          <ul>
-            <li>Visita al Arco de Santa Catalina</li>
-            <li>Paseo por la Calle del Arco</li>
-            <li>Refacción:
-              <ul>
-                <li>Chocolate caliente</li>
-                <li>Pan artesanal</li>
-              </ul>
-            </li>
-          </ul>
-        </td>
-        <td>Zona central</td>
-      </tr>
-            </tbody>
-          </table>
+    <!-- Tabs de información -->
+    <section class="mb-5">
+      <ul class="nav nav-tabs nav-fill" id="infoTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="historia-tab" data-bs-toggle="tab" data-bs-target="#historia" type="button">
+            <i class="bi bi-clock-history me-2"></i>Historia
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="cultura-tab" data-bs-toggle="tab" data-bs-target="#cultura" type="button">
+            <i class="bi bi-people me-2"></i>Cultura
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="gastronomia-tab" data-bs-toggle="tab" data-bs-target="#gastronomia" type="button">
+            <i class="bi bi-cup-hot me-2"></i>Gastronomía
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="infoTabsContent">
+        <div class="tab-pane fade show active" id="historia" role="tabpanel">
+          <div class="p-4 bg-light rounded-bottom">
+            <h5>Rica Historia Colonial</h5>
+            <p>Antigua Guatemala fue la tercera capital del Reino de Guatemala y una de las ciudades más importantes de América durante la época colonial. Fundada en 1543, conserva una arquitectura única que la convierte en Patrimonio de la Humanidad.</p>
+          </div>
         </div>
-      </fieldset>
+        <div class="tab-pane fade" id="cultura" role="tabpanel">
+          <div class="p-4 bg-light rounded-bottom">
+            <h5>Tradiciones Vivas</h5>
+            <p>La ciudad mantiene vivas sus tradiciones a través de festivales religiosos, procesiones de Semana Santa reconocidas mundialmente, y una rica escena artística con galerías y talleres de artesanos locales.</p>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="gastronomia" role="tabpanel">
+          <div class="p-4 bg-light rounded-bottom">
+            <h5>Sabores Únicos</h5>
+            <p>Disfruta de la cocina guatemalteca tradicional, café de exportación, chocolate artesanal y dulces típicos. Los restaurantes locales ofrecen desde comida callejera hasta alta cocina internacional.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="actividades">
-      <fieldset>
-        <legend><strong>Actividades adicionales</strong></legend>
-        <ul class="actividades-lista">
-          <li>Subida al Cerro de la Cruz</li>
-          <li>Visita al Museo del Jade</li>
-          <li>Tour del café</li>
-          <li>Compra de artesanías</li>
-          <li>Degustación de chocolate artesanal</li>
-        </ul>
-      </fieldset>
+    <!-- CTA Section -->
+    <section class="text-center py-5 bg-primary-custom rounded">
+      <h3 class="text-white mb-4">¿Listo para tu Aventura?</h3>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="text-white mb-4">Explora nuestras atracciones imperdibles y encuentra el alojamiento perfecto para tu estadía.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+            <a href="atracciones.html" class="btn btn-light btn-lg me-md-2">Ver Atracciones</a>
+            <a href="alojamiento.html" class="btn btn-outline-light btn-lg">Buscar Alojamiento</a>
+          </div>
+        </div>
+      </div>
     </section>
+
   </main>
 
-  <footer>
-    <h4 id="footer">Página creada por Joshua Mendez 9490-22-4032</h4>
+  <!-- Modal -->
+  <div class="modal fade" id="infoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sobre Antigua Guatemala</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="https://aprende.guatemala.com/wp-content/uploads/2017/05/Las-calles-empedradas-de-Antigua-Guatemala.jpg" class="img-fluid rounded" alt="Calles empedradas">
+            </div>
+            <div class="col-md-6">
+              <h6>¿Por qué visitar Antigua?</h6>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i>Patrimonio de la Humanidad UNESCO</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Arquitectura colonial preservada</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Clima primaveral todo el año</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Rica cultura y tradiciones</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Excelente gastronomía</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="atracciones.html" class="btn btn-primary">Explorar Ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 - Página creada por <strong>Joshua Mendez</strong> - Carnet: 9490-22-4032</p>
+      <p class="mb-0 small">Universidad Mariano Gálvez - Desarrollo Web</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html></body>
 </html>

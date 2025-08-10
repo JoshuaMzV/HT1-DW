@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra el alojamiento perfecto en Antigua Guatemala">
+  <title>Alojamiento - Antigua Guatemala</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-geo-alt-fill me-2"></i>Antigua Guatemala</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="atracciones.html">Atracciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="alojamiento.html">Alojamiento</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold text-white">Alojamiento</h1>
+          <p class="lead text-white-50">Encuentra el lugar perfecto para tu estadía</p>
+        </div>
+        <div class="col-lg-4">
+          <button class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#reservaModal">
+            <i class="bi bi-calendar-check me-2"></i>Reservar Ahora
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    
+    <!-- Tabs de categorías de alojamiento -->
+    <section class="mb-5">
+      <ul class="nav nav-pills nav-fill mb-4" id="alojamientoTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="hoteles-tab" data-bs-toggle="pill" data-bs-target="#hoteles" type="button">
+            <i class="bi bi-building me-2"></i>Hoteles
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="hostales-tab" data-bs-toggle="pill" data-bs-target="#hostales" type="button">
+            <i class="bi bi-house me-2"></i>Hostales
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="boutique-tab" data-bs-toggle="pill" data-bs-target="#boutique" type="button">
+            <i class="bi bi-gem me-2"></i>Boutique
+          </button>
+        </li>
+      </ul>
+      
+      <div class="tab-content" id="alojamientoTabsContent">
+        
+        <!-- Tab Hoteles -->
+        <div class="tab-pane fade show active" id="hoteles" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <div id="hotel1Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/85524341.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Hotel Casa Santo Domingo">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/85524342.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Habitación Hotel">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#hotel1Carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#hotel1Carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Casa Santo Domingo</h5>
+                  <p class="card-text">Lujoso hotel construido dentro de un convento del siglo XVI. Combina historia y comodidad moderna.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <small class="text-muted">(4.8/5)</small>
+                    </div>
+                    <span class="badge bg-success">Disponible</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$180/noche</strong>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#hotelModal1">
+                      Ver detalles
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <div id="hotel2Carousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/45234567.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Hotel Camino Real">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/45234568.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Piscina Hotel">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#hotel2Carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#hotel2Carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Camino Real</h5>
+                  <p class="card-text">Hotel moderno con todas las comodidades. Piscina, spa y restaurante gourmet en pleno centro histórico.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <small class="text-muted">(4.5/5)</small>
+                    </div>
+                    <span class="badge bg-warning text-dark">Pocas habitaciones</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$120/noche</strong>
+                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#hotelModal2">
+                      Ver detalles
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/67891234.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Hotel Portal del Angel">
+                <div class="card-body">
+                  <h5 class="card-title">Hotel Portal del Angel</h5>
+                  <p class="card-text">Hotel familiar con excelente ubicación. Habitaciones cómodas y desayuno incluido.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <small class="text-muted">(4.2/5)</small>
+                    </div>
+                    <span class="badge bg-success">Disponible</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$85/noche</strong>
+                    <button class="btn btn-primary btn-sm">
+                      Ver detalles
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Hostales -->
+        <div class="tab-pane fade" id="hostales" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/12345678.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Hostal Backpackers">
+                <div class="card-body">
+                  <h5 class="card-title">Hostal Backpackers</h5>
+                  <p class="card-text">Ambiente juvenil y relajado. Dormitorios compartidos y habitaciones privadas. Ideal para mochileros.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <small class="text-muted">(4.3/5)</small>
+                    </div>
+                    <span class="badge bg-success">Disponible</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$25/noche</strong>
+                    <button class="btn btn-primary btn-sm">Ver detalles</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/87654321.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Hostal Colonial">
+                <div class="card-body">
+                  <h5 class="card-title">Hostal Colonial</h5>
+                  <p class="card-text">Hostal en casa colonial restaurada. Patio central, cocina compartida y ambiente acogedor.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <small class="text-muted">(4.1/5)</small>
+                    </div>
+                    <span class="badge bg-success">Disponible</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$35/noche</strong>
+                    <button class="btn btn-primary btn-sm">Ver detalles</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Boutique -->
+        <div class="tab-pane fade" id="boutique" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="card h-100 card-custom">
+                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/98765432.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="card-img-top" alt="Casa Encantada">
+                <div class="card-body">
+                  <h5 class="card-title">Casa Encantada</h5>
+                  <p class="card-text">Hotel boutique de lujo con solo 8 habitaciones. Diseño único, servicio personalizado y spa privado.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <small class="text-muted">(4.9/5)</small>
+                    </div>
+                    <span class="badge bg-danger">Completo</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <strong class="text-primary">$280/noche</strong>
+                    <button class="btn btn-secondary btn-sm" disabled>No disponible</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Servicios incluidos -->
+    <section class="bg-light rounded p-4 mb-5">
+      <h3 class="text-center mb-4">Servicios Incluidos</h3>
+      <div class="row text-center">
+        <div class="col-md-3 mb-3">
+          <i class="bi bi-wifi display-4 text-primary mb-2"></i>
+          <h5>WiFi Gratuito</h5>
+          <p class="text-muted small">Internet de alta velocidad en todas las áreas</p>
+        </div>
+        <div class="col-md-3 mb-3">
+          <i class="bi bi-cup-hot display-4 text-primary mb-2"></i>
+          <h5>Desayuno</h5>
+          <p class="text-muted small">Desayuno típico guatemalteco incluido</p>
+        </div>
+        <div class="col-md-3 mb-3">
+          <i class="bi bi-car-front display-4 text-primary mb-2"></i>
+          <h5>Transporte</h5>
+          <p class="text-muted small">Traslado desde el aeropuerto disponible</p>
+        </div>
+        <div class="col-md-3 mb-3">
+          <i class="bi bi-headset display-4 text-primary mb-2"></i>
+          <h5>Soporte 24/7</h5>
+          <p class="text-muted small">Asistencia turística las 24 horas</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Reserva -->
+  <div class="modal fade" id="reservaModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title"><i class="bi bi-calendar-check me-2"></i>Realizar Reserva</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="checkin" class="form-label">Fecha de llegada</label>
+                <input type="date" class="form-control" id="checkin" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="checkout" class="form-label">Fecha de salida</label>
+                <input type="date" class="form-control" id="checkout" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="huespedes" class="form-label">Número de huéspedes</label>
+                <select class="form-select" id="huespedes">
+                  <option selected>1 huésped</option>
+                  <option>2 huéspedes</option>
+                  <option>3 huéspedes</option>
+                  <option>4 huéspedes</option>
+                  <option>Más de 4</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="tipoAlojamiento" class="form-label">Tipo de alojamiento</label>
+                <select class="form-select" id="tipoAlojamiento">
+                  <option selected>Hotel</option>
+                  <option>Hostal</option>
+                  <option>Boutique</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" required>
+            </div>
+            <div class="mb-3">
+              <label for="comentarios" class="form-label">Comentarios adicionales</label>
+              <textarea class="form-control" id="comentarios" rows="3" placeholder="Solicitudes especiales, alergias, etc."></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Confirmar Reserva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Hotel 1 -->
+  <div class="modal fade" id="hotelModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Hotel Casa Santo Domingo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/85524341.jpg?k=f4b9b03ce4c9cf1b70f4cca8b6c1b80f7f6b93be6e03b2ad5a51c85b2e5c6b8c&o=" class="img-fluid rounded mb-3" alt="Hotel Casa Santo Domingo">
+            </div>
+            <div class="col-md-6">
+              <h6>Características:</h6>
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i>WiFi gratuito</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Piscina al aire libre</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Spa completo</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>3 restaurantes</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Museo privado</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i>Jardines coloniales</li>
+              </ul>
+              <p><strong>Ubicación:</strong> A 2 cuadras del Parque Central</p>
+              <p><strong>Check-in:</strong> 3:00 PM | <strong>Check-out:</strong> 12:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 - Página creada por <strong>Joshua Mendez</strong> - Carnet: 9490-22-4032</p>
+      <p class="mb-0 small">Universidad Mariano Gálvez - Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

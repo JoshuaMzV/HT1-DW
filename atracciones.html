@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre las mejores atracciones turísticas de Antigua Guatemala">
+  <title>Atracciones - Antigua Guatemala</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-geo-alt-fill me-2"></i>Antigua Guatemala</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="atracciones.html">Atracciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="alojamiento.html">Alojamiento</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold text-white">Atracciones Imperdibles</h1>
+          <p class="lead text-white-50">Descubre los lugares más emblemáticos de Antigua Guatemala</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    
+    <!-- Filtros por categoría -->
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center mb-4">Explora por Categorías</h2>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <button class="btn btn-outline-primary active" data-filter="all">Todas</button>
+            <button class="btn btn-outline-primary" data-filter="historico">Histórico</button>
+            <button class="btn btn-outline-primary" data-filter="religioso">Religioso</button>
+            <button class="btn btn-outline-primary" data-filter="natural">Natural</button>
+            <button class="btn btn-outline-primary" data-filter="cultural">Cultural</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards de Atracciones -->
+    <section class="row g-4 mb-5" id="atracciones-container">
+      
+      <!-- Arco de Santa Catalina -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="historico">
+        <div class="card h-100 card-custom">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" class="card-img-top" alt="Arco de Santa Catalina">
+          <div class="card-body">
+            <h5 class="card-title">Arco de Santa Catalina</h5>
+            <p class="card-text">Icónico arco amarillo que conectaba el convento de Santa Catalina. Símbolo de la ciudad y uno de los lugares más fotografiados.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-primary">Histórico</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#arcoModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catedral -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="religioso">
+        <div class="card h-100 card-custom">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Guatemala_176.jpg" class="card-img-top" alt="Catedral de Antigua">
+          <div class="card-body">
+            <h5 class="card-title">Catedral de San José</h5>
+            <p class="card-text">Majestuosa catedral barroca del siglo XVI. Sus ruinas y la nueva construcción coexisten creando una vista única.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Religioso</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#catedralModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volcán de Agua -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="natural">
+        <div class="card h-100 card-custom">
+          <img src="https://www.volcanesdeguatemala.com/imagenes/volcanes/volcan-de-agua-guatemala.jpg" class="card-img-top" alt="Volcán de Agua">
+          <div class="card-body">
+            <h5 class="card-title">Volcán de Agua</h5>
+            <p class="card-text">Majestuoso volcán que domina el horizonte de Antigua. Ideal para caminatas y vistas panorámicas espectaculares.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning">Natural</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#volcanModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cerro de la Cruz -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="natural">
+        <div class="card h-100 card-custom">
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/4a/3a/6b/cerro-de-la-cruz.jpg?w=500&h=400" class="card-img-top" alt="Cerro de la Cruz">
+          <div class="card-body">
+            <h5 class="card-title">Cerro de la Cruz</h5>
+            <p class="card-text">Mirador natural con vistas panorámicas de toda la ciudad y los volcanes circundantes. Perfecto para el atardecer.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning">Natural</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#cerroModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Museo del Jade -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="cultural">
+        <div class="card h-100 card-custom">
+          <img src="https://museoixchel.org/wp-content/uploads/2019/01/jade.jpg" class="card-img-top" alt="Museo del Jade">
+          <div class="card-body">
+            <h5 class="card-title">Museo del Jade</h5>
+            <p class="card-text">Fascinante colección de jade maya y artefactos precolombinos. Descubre la importancia de esta piedra sagrada.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-info">Cultural</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#museoModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- La Merced -->
+      <div class="col-lg-4 col-md-6 atraccion-item" data-category="religioso">
+        <div class="card h-100 card-custom">
+          <img src="https://i0.wp.com/www.deguate.com/artman/uploads/39/lamerced1.jpg" class="card-img-top" alt="Iglesia La Merced">
+          <div class="card-body">
+            <h5 class="card-title">Iglesia La Merced</h5>
+            <p class="card-text">Hermosa iglesia barroca con fachada amarilla ornamentada. Una de las iglesias mejor conservadas de la ciudad.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-success">Religioso</span>
+              <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#mercedModal">
+                Ver más <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Itinerario Sugerido -->
+    <section class="mb-5">
+      <h2 class="text-center mb-4">Itinerario Sugerido</h2>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">Fecha</th>
+              <th scope="col">Hora</th>
+              <th scope="col">Actividad</th>
+              <th scope="col">Lugar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10/08/2025</td>
+              <td>07:00 AM</td>
+              <td>
+                <strong>Salida desde Ciudad de Guatemala</strong><br>
+                <small class="text-muted">• Refacción: Sandwich y jugo natural</small>
+              </td>
+              <td>Terminal Central</td>
+            </tr>
+            <tr>
+              <td>10/08/2025</td>
+              <td>09:00 AM</td>
+              <td>
+                <strong>Recorrido Centro Histórico</strong><br>
+                <small class="text-muted">• Visita guiada a iglesias y museos</small>
+              </td>
+              <td>Parque Central</td>
+            </tr>
+            <tr>
+              <td>10/08/2025</td>
+              <td>12:00 PM</td>
+              <td>
+                <strong>Almuerzo Típico</strong><br>
+                <small class="text-muted">• Pepián o Pollo en Jocón<br>• Bebida y postre incluidos</small>
+              </td>
+              <td>Restaurante "La Cuevita"</td>
+            </tr>
+            <tr>
+              <td>10/08/2025</td>
+              <td>03:00 PM</td>
+              <td>
+                <strong>Arco de Santa Catalina</strong><br>
+                <small class="text-muted">• Paseo por la Calle del Arco<br>• Chocolate caliente y pan artesanal</small>
+              </td>
+              <td>Zona Central</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modales para cada atracción -->
+  
+  <!-- Modal Arco -->
+  <div class="modal fade" id="arcoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Arco de Santa Catalina</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Antigua_-_Arco.jpg" class="img-fluid mb-3 rounded" alt="Arco de Santa Catalina">
+          <p>El Arco de Santa Catalina es uno de los monumentos más reconocibles de Antigua Guatemala. Construido en el siglo XVII, originalmente servía como puente para que las monjas del Convento de Santa Catalina de Siena pudieran cruzar la calle sin ser vistas por el público.</p>
+          <h6>Datos interesantes:</h6>
+          <ul>
+            <li>Altura: 11 metros</li>
+            <li>Año de construcción: 1694</li>
+            <li>Estilo: Arquitectura colonial</li>
+            <li>Ubicación: 5ta Avenida Norte</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Más modales similares para otras atracciones... -->
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 - Página creada por <strong>Joshua Mendez</strong> - Carnet: 9490-22-4032</p>
+      <p class="mb-0 small">Universidad Mariano Gálvez - Desarrollo Web</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JS para filtros -->
+  <script>
+    // Funcionalidad de filtros
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const items = document.querySelectorAll('.atraccion-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remover clase active de todos los botones
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Agregar clase active al botón clickeado
+          button.classList.add('active');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          items.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

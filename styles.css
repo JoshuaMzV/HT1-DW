@@ -1,287 +1,374 @@
-/* CSS básico para Excursión a Antigua Guatemala */
+/* CSS personalizado para Antigua Guatemala con Bootstrap */
 
-/* Variables CSS para colores coherentes */
+/* Variables CSS personalizadas */
 :root {
   --color-principal: #8B4513;
   --color-secundario: #D2691E;
   --color-acento: #F4A460;
   --color-texto: #333;
   --color-fondo: #FFF8DC;
+  --color-dorado: #DAA520;
 }
 
-/* Reset básico y configuración general */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Personalización de colores de Bootstrap */
+:root {
+  --bs-primary: #8B4513;
+  --bs-primary-rgb: 139, 69, 19;
+  --bs-secondary: #D2691E;
+  --bs-secondary-rgb: 210, 105, 30;
+  --bs-success: #228B22;
+  --bs-info: #20B2AA;
+  --bs-warning: #DAA520;
+  --bs-danger: #DC143C;
+  --bs-light: #FFF8DC;
+  --bs-dark: #2F1B14;
 }
 
+/* Estilos globales */
 body {
-  font-family: Georgia, serif;
-  line-height: 1.6;
-  color: var(--color-texto);
+  font-family: 'Georgia', serif;
   background-color: var(--color-fondo);
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  padding-top: 76px; /* Espacio para navbar fixed */
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
-  color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 2.5em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-/* Navegación */
-nav {
-  margin-bottom: 30px;
-}
-
-nav fieldset {
-  border: 2px solid var(--color-principal);
-  border-radius: 8px;
-  padding: 15px;
-  background-color: white;
-}
-
-nav legend {
-  color: var(--color-principal);
-  font-size: 1.2em;
-  padding: 0 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-nav li {
-  background-color: var(--color-acento);
-  border-radius: 5px;
-  transition: transform 0.3s ease;
-}
-
-nav li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-nav a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: var(--color-texto);
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-nav a:hover {
-  color: white;
-  background-color: var(--color-principal);
-}
-
-/* Secciones principales */
-main section {
-  margin-bottom: 40px;
-}
-
-fieldset {
-  border: 2px solid var(--color-secundario);
-  border-radius: 10px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-legend {
-  color: var(--color-principal);
-  font-size: 1.3em;
-  padding: 0 15px;
-  background-color: var(--color-fondo);
-  border-radius: 5px;
-}
-
-/* Galería de imágenes */
-#galeria {
-  text-align: center;
-}
-
-.imagen-container {
-  display: inline-block;
-  margin: 15px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.imagen-container:hover {
-  transform: scale(1.05);
-}
-
-.imagen-container img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Tabla de itinerario */
-.tabla-container {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  background-color: white;
-  border-radius: 8px;
-  overflow: hidden;
+/* Navbar personalizada */
+.navbar-custom {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.navbar-custom .navbar-brand {
+  color: white !important;
+  font-size: 1.5rem;
 }
 
-th {
-  background-color: var(--color-principal);
-  color: white;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: var(--color-acento);
-  transition: background-color 0.3s ease;
-}
-
-/* Listas dentro de las celdas */
-td ul {
-  margin: 8px 0;
-}
-
-td li {
-  margin: 5px 0;
-}
-
-/* Lista de actividades */
-.actividades-lista {
-  list-style: none;
-  padding: 0;
-}
-
-.actividades-lista li {
-  background-color: var(--color-acento);
-  margin: 10px 0;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 4px solid var(--color-principal);
+.navbar-custom .nav-link {
+  color: rgba(255,255,255,0.9) !important;
+  font-weight: 500;
   transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: white !important;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.3);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.actividades-lista li:hover {
-  background-color: var(--color-secundario);
-  color: white;
-  transform: translateX(10px);
+.hero-section .carousel-item {
+  height: 100vh;
 }
 
-.actividades-lista li::before {
-  content: "✓";
+.hero-section .carousel-item img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-caption {
   position: absolute;
-  left: -10px;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--color-principal);
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 20px;
+  width: 100%;
+}
+
+.carousel-caption h1 {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 1.5rem;
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Page Header para páginas internas */
+.page-header {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+  padding: 100px 0 60px;
+  margin-top: -76px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.page-header > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards personalizadas */
+.card-custom {
+  border: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-custom:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.card-custom .card-body {
+  padding: 1.5rem;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+}
+
+/* Botones personalizados */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6B3410 0%, #B8541A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 69, 19, 0.4);
+}
+
+.btn-outline-primary {
+  border-color: var(--color-principal);
+  color: var(--color-principal);
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  transform: translateY(-2px);
+}
+
+/* Tabs personalizados */
+.nav-tabs .nav-link {
+  border: none;
+  color: var(--color-principal);
+  font-weight: 600;
+  border-radius: 10px 10px 0 0;
+  margin-right: 5px;
+}
+
+.nav-tabs .nav-link.active {
   background-color: var(--color-principal);
   color: white;
-  border-radius: 10px;
-  margin-top: 40px;
 }
 
-footer h4 {
-  font-size: 1.1em;
-  font-weight: normal;
+.nav-pills .nav-link {
+  border-radius: 25px;
+  color: var(--color-principal);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Responsividad básica */
+.nav-pills .nav-link.active {
+  background-color: var(--color-principal);
+}
+
+/* Sección CTA */
+.bg-primary-custom {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+}
+
+/* Tablas personalizadas */
+.table-striped > tbody > tr:nth-of-type(odd) > td {
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+.table-hover > tbody > tr:hover > td {
+  background-color: rgba(139, 69, 19, 0.1);
+}
+
+.table-dark {
+  --bs-table-bg: var(--color-principal);
+}
+
+/* Carousel personalizado */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(139, 69, 19, 0.8);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--color-principal);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Modales personalizados */
+.modal-header {
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.modal-footer {
+  border-top: 2px solid var(--color-acento);
+}
+
+/* Badges personalizados */
+.badge {
+  font-size: 0.8em;
+  padding: 0.5em 0.8em;
+  border-radius: 15px;
+}
+
+/* Filtros de atracciones */
+.btn-outline-primary.active {
+  background-color: var(--color-principal) !important;
+  border-color: var(--color-principal) !important;
+  color: white !important;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.atraccion-item {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Hover effects para imágenes */
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsividad mejorada */
 @media (max-width: 768px) {
-  body {
-    padding: 10px;
+  .hero-section .carousel-caption h1 {
+    font-size: 2rem;
   }
   
-  header h1 {
-    font-size: 2em;
+  .hero-section .carousel-caption p {
+    font-size: 1rem;
   }
   
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .page-header {
+    padding: 80px 0 40px;
   }
   
-  .imagen-container {
-    margin: 10px 5px;
+  .page-header h1 {
+    font-size: 2.5rem;
   }
   
-  .imagen-container img {
-    width: 280px;
+  .card-custom {
+    margin-bottom: 1.5rem;
   }
   
-  table {
-    font-size: 14px;
+  .navbar-nav {
+    text-align: center;
   }
   
-  th, td {
-    padding: 8px;
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
-@media (max-width: 480px) {
-  .imagen-container img {
-    width: 250px;
-    height: 170px;
+@media (max-width: 576px) {
+  .hero-section .carousel-caption h1 {
+    font-size: 1.8rem;
   }
   
-  table {
-    font-size: 12px;
+  .hero-section .carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
   
-  th, td {
-    padding: 6px;
+  .page-header h1 {
+    font-size: 2rem;
   }
+  
+  .display-4 {
+    font-size: 1.8rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Efectos adicionales */
+.card-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.card-custom:hover::before {
+  left: 100%;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estrellas de calificación */
+.bi-star-fill.text-warning,
+.bi-star.text-warning {
+  color: var(--color-dorado) !important;
 }
