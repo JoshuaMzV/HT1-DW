@@ -37,64 +37,30 @@ Este proyecto es un sitio web turístico completo desarrollado como parte del cu
 - Estructura HTML básica y semántica
 - Contenido organizado con fieldsets y enlaces internos
 - Tabla de itinerario detallada
-- Galería de imágenes básica
-
-### **Hoja de Trabajo 2 (HTML + CSS)**
-- **Semántica mejorada**: Elementos `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
-- **Accesibilidad**: Atributos `alt` descriptivos, `scope` en headers de tabla
-- **CSS personalizado**: Variables, efectos hover, transiciones suaves
 - **Responsive design**: Media queries para dispositivos móviles
 - **Paleta de colores**: Tonos coloniales inspirados en Antigua Guatemala
-
-### **Hoja de Trabajo 3 (Bootstrap + Componentes Avanzados)**
-- **Bootstrap 5.3.2**: Framework responsive completo
-- **Navegación**: Navbar fixed-top responsive con brand personalizado
-- **Componentes utilizados**:
   - **Carousel**: Hero section con fade effect e indicadores
   - **Modal**: Ventanas emergentes para información y reservas
-  - **Tabs**: Organización de contenido por categorías
-  - **Cards**: Presentación elegante de atracciones y alojamientos
-  - **Badges**: Sistema de estado y categorización
-  - **Tables**: Responsive con hover effects
-  - **Buttons**: Personalizados con gradientes y efectos
 - **Personalización de Bootstrap**: Variables CSS custom para colores temáticos
-- **Interactividad**: JavaScript para filtros dinámicos
 - **UX mejorada**: Animaciones, efectos hover y transiciones fluidas
 
 ## 🎨 **Características de Diseño**
 
-### **Paleta de Colores**
-- **Primario**: #8B4513 (Marrón colonial)
-- **Secundario**: #D2691E (Naranja tierra)
-- **Acento**: #F4A460 (Arena)
 - **Fondo**: #FFF8DC (Crema antiguo)
 
 ### **Tipografía**
 - **Fuente principal**: Georgia (serif elegante)
 - **Jerarquía clara**: Display, headings y body text diferenciados
-
-### **Efectos Visuales**
 - Gradientes sutiles en backgrounds
-- Sombras para profundidad
 - Transformaciones en hover
 - Transiciones suaves (0.3s ease)
 - Efectos de brillo en cards
 
 ### **Responsive Design**
-- **Mobile-first approach**
 - **Breakpoints**: 576px, 768px, 992px, 1200px
 - **Componentes adaptables**: Navbar collapse, card grids, tables
 
----
 
-## 🔗 Sitio web publicado
-
-➡️ Puedes ver el sitio desplegado en Netlify aquí:  
-**[https://deploy-preview-2--ht1-dw-josh.netlify.app/]**
-
----
-
-## 🛠️ Tecnologías Utilizadas
 
 - **HTML5**: Estructura semántica
 - **CSS3**: Estilos personalizados y animaciones
@@ -104,7 +70,6 @@ Este proyecto es un sitio web turístico completo desarrollado como parte del cu
 - **Git**: Control de versiones
 - **GitHub**: Repositorio y colaboración
 - **Netlify**: Despliegue y hosting
-
 ---
 
 ## 👨‍💻 Desarrollado por

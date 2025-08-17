@@ -237,3 +237,162 @@
 </body>
 </html></body>
 </html>
+
+    <!-- Sección 1: Itinerarios de actividades -->
+    <section class="container my-5">
+      <h2 class="mb-4">Itinerarios de Actividades</h2>
+      <div class="mb-3">
+        <button class="btn btn-primary me-2" onclick="mostrarTabla('playa')">Playa</button>
+        <button class="btn btn-success me-2" onclick="mostrarTabla('montaña')">Montaña</button>
+        <button class="btn btn-warning" onclick="mostrarTabla('cultural')">Cultural</button>
+      </div>
+      <div id="tabla-playa" class="itinerario-tabla">
+        <table class="table table-bordered">
+          <thead><tr><th>Hora</th><th>Actividad</th></tr></thead>
+          <tbody>
+            <tr><td>08:00</td><td>Paseo por la playa</td></tr>
+            <tr><td>10:00</td><td>Clases de surf</td></tr>
+            <tr><td>12:00</td><td>Almuerzo frente al mar</td></tr>
+            <tr><td>15:00</td><td>Tour en lancha</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tabla-montaña" class="itinerario-tabla" style="display:none;">
+        <table class="table table-bordered">
+          <thead><tr><th>Hora</th><th>Actividad</th></tr></thead>
+          <tbody>
+            <tr><td>07:00</td><td>Senderismo</td></tr>
+            <tr><td>09:00</td><td>Desayuno campestre</td></tr>
+            <tr><td>11:00</td><td>Escalada</td></tr>
+            <tr><td>14:00</td><td>Picnic en la cima</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="tabla-cultural" class="itinerario-tabla" style="display:none;">
+        <table class="table table-bordered">
+          <thead><tr><th>Hora</th><th>Actividad</th></tr></thead>
+          <tbody>
+            <tr><td>09:00</td><td>Visita a museos</td></tr>
+            <tr><td>11:00</td><td>Recorrido histórico</td></tr>
+            <tr><td>13:00</td><td>Almuerzo típico</td></tr>
+            <tr><td>16:00</td><td>Show cultural</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección 2: Área de Comentarios -->
+    <section class="container my-5">
+      <h2 class="mb-4">Comentarios de Visitantes</h2>
+      <div id="comentarios-container" class="row g-4"></div>
+    </section>
+
+    <!-- Sección 3: Formulario de Contacto -->
+    <section class="container my-5">
+      <h2 class="mb-4">Contacto</h2>
+      <form id="contactForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="col-md-6">
+          <label for="fecha" class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="col-md-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      <!-- Modal Bootstrap -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="confirmModalLabel">¡Formulario enviado!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts JS -->
+    <script>
+      // Itinerarios
+      function mostrarTabla(tipo) {
+        document.getElementById('tabla-playa').style.display = tipo === 'playa' ? 'block' : 'none';
+        document.getElementById('tabla-montaña').style.display = tipo === 'montaña' ? 'block' : 'none';
+        document.getElementById('tabla-cultural').style.display = tipo === 'cultural' ? 'block' : 'none';
+      }
+
+      // Comentarios y nombres
+      const comentarios = [
+        '¡Excelente experiencia!', 'Muy recomendado.', 'Volveré pronto.', 'El mejor viaje.', 'Servicio de calidad.',
+        'Hermosos paisajes.', 'Guías muy amables.', 'Comida deliciosa.', 'Actividades divertidas.', 'Lugar mágico.'
+      ];
+      const nombres = [
+        'Ana', 'Luis', 'María', 'Carlos', 'Sofía', 'Pedro', 'Lucía', 'Jorge', 'Valeria', 'Miguel'
+      ];
+      function obtenerAleatorios(arr, n) {
+        const copia = [...arr];
+        const resultado = [];
+        for (let i = 0; i < n; i++) {
+          const idx = Math.floor(Math.random() * copia.length);
+          resultado.push(copia.splice(idx, 1)[0]);
+        }
+        return resultado;
+      }
+      function mostrarComentarios() {
+        const comentariosSel = obtenerAleatorios(comentarios, 3);
+        const nombresSel = obtenerAleatorios(nombres, 3);
+        const container = document.getElementById('comentarios-container');
+        container.innerHTML = '';
+        for (let i = 0; i < 3; i++) {
+          container.innerHTML += `
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h5 class="card-title">${nombresSel[i]}</h5>
+                  <p class="card-text">${comentariosSel[i]}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      }
+      mostrarComentarios();
+
+      // Formulario de contacto
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        const fecha = document.getElementById('fecha').value;
+        const email = document.getElementById('email').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!nombre || !fecha || !email || !mensaje || !emailValido) {
+          alert('Por favor, completa todos los campos correctamente.');
+          return;
+        }
+        // Mostrar modal Bootstrap
+        const modalBody = document.getElementById('modalBody');
+        modalBody.innerHTML = `<strong>Nombre:</strong> ${nombre}<br><strong>Fecha de nacimiento:</strong> ${fecha}<br><strong>Email:</strong> ${email}<br><strong>Mensaje:</strong> ${mensaje}`;
+        const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+        modal.show();
+        // Mostrar en consola
+        console.log({ nombre, fecha, email, mensaje });
+        this.reset();
+      });
+    </script>
